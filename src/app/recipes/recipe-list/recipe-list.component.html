@@ -1,1 +1,25 @@
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success">
+            Add New
+        </button>
+    </div>
+</div>
+<hr>
+<div class="row">    
+    <div class="col-xs-12">
+        <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipesList">
+            <div class="pull-left">
+                <h4 class="list-group-item-heading"> {{recipe.recipeName}} </h4>
+                <p class="list-group-item-text"> {{recipe.recipeDescription}} </p>
+            </div>
+            <span class="pull-right">
+                <img src= "{{ recipe.impagePath }}" alt="" class="img-responsive" style="max-height: 50px;">
+                <!-- we can use property binding instead of string interpolation as follows
+                [src] = "recipe.impagePath"
+                -->
+            </span>
+        </a>
+    </div>
+</div>
 <app-recipe-item></app-recipe-item>
