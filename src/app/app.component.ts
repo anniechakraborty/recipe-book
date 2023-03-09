@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recipe-book';
+  recipeClicked : boolean = false;
+  shoppingClicked : boolean = false;
+
+  onRecipeClicked(){
+    this.recipeClicked = true;
+    this.shoppingClicked = false;
+  }
+
+  onShoppingClicked(){
+    this.shoppingClicked = true;
+    this.recipeClicked = false;
+  }
 }
